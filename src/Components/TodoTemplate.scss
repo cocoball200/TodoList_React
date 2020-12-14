@@ -1,0 +1,21 @@
+.TodoTemplate{
+ width: 512px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 6rem;
+ border-radius: 4px;
+ overflow: hidden;
+
+ .app-title{
+     background-color: #22b8cf;
+     color: white;
+     height: 4rem;
+     font-size: 1.5rem;
+     display: flex;
+     align-items: center; // 가로로 센터 정렬 
+     justify-content: center // 옆으로 센터 정렬;
+ }
+ .content{
+     background: white;
+ }
+}
