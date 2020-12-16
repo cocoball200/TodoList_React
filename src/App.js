@@ -25,6 +25,7 @@ const App = () => {
   const nextId = useRef(4);
 
   const onInsert = useCallback(text => {
+    debugger;
     const todo = {
       id: nextId.current,
       text,
@@ -35,6 +36,7 @@ const App = () => {
   }, [todos])
   return (
     <TodoTemplate>
+      {/* form 리턴값을 받음 */}
       <TodoInsert onInsert={onInsert} />
       <TodoList todos={todos} />
     </TodoTemplate>
