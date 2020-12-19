@@ -33,14 +33,24 @@ const App = () => {
     };
     setTodos(todos.concat(todo));
     nextId.current += 1;
-  }, [todos])
+  }, [todos]);
+
+  const onRemove = useCallback(id => {
+    console.log(id);
+    setTodos(todos.filter(todo => todo.id !== id));
+  },
+    [todos],
+  );
+
+
   return (
     <TodoTemplate>
       {/* form 리턴값을 받음 */}
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onRemove={onRemove} />
     </TodoTemplate>
-  )
+  );
+};
 
-}
+
 export default App;
